@@ -5,9 +5,9 @@ class Doggy
     name = gets.chomp
     @name = name
     @health = 70
-  	@mood = 70i
-  	@hunger = 30
-  	@tiredness = 30
+    @mood = 70
+    @hunger = 30
+    @tiredness = 30
     @asleep = 70
     @defend = false
     puts "#{@name} начал жить с нами :)"
@@ -15,7 +15,7 @@ class Doggy
   end
 
   def feed
-		puts "Вы кормите #{@name}a"
+    puts "Вы кормите #{@name}a"
     @hunger = 0
     @health += 10
     @mood += 10
@@ -25,7 +25,7 @@ class Doggy
   end
 
   def walk
-		puts "Вы гуляете с #{@name}"
+	  puts "Вы гуляете с #{@name}"
 		@tiredness += 30
     @mood += 20
     @asleep -= 15
