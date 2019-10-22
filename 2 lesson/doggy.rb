@@ -15,7 +15,7 @@ class Doggy
   end
 
   def feed
-		p "Вы кормите #{@name}a"
+		puts "Вы кормите #{@name}a"
     @hunger = 0
     @health += 10
     @mood += 10
@@ -25,7 +25,7 @@ class Doggy
   end
 
   def walk
-		p "Вы гуляете с #{@name}"
+		puts "Вы гуляете с #{@name}"
 		@tiredness += 30
     @mood += 20
     @asleep -= 15
@@ -36,7 +36,7 @@ class Doggy
   end
 
   def go_to_sleep
-	  p "#{@name} пошел спать"
+	  puts "#{@name} пошел спать"
     @hunger += 50
     @health += 25
     @asleep = 100
@@ -45,7 +45,7 @@ class Doggy
 	end
 
   def play
-    p "Весело играть с #{@name}!"
+    puts "Весело играть с #{@name}!"
     @mood += 30
     @tiredness += 20
     @health += 5
@@ -54,7 +54,7 @@ class Doggy
   end
 
   def bathe
-    p "Нужно привести #{@name} в порядок"
+    puts "Нужно привести #{@name} в порядок"
     @health += 10
     @hunger += 5
     @mood +=5
@@ -62,13 +62,13 @@ class Doggy
   end
 
   def scratch
-    p "#{@name} любит когда его почесывают за ухом"
+    puts "#{@name} любит когда его почесывают за ухом"
     @mood += 20
     user_interaction
   end
 
   def see_some_stranger
-    p "#{@name} рычит и лает"
+    puts "#{@name} рычит и лает"
     @defend = true
     @hunger += 5
     @asleep += 3
@@ -87,6 +87,7 @@ class Doggy
     puts 'Ее можно почесать за ухом - scratch'
     puts 'Она может защитить - see_some_stranger'
     puts 'За ней можно понаблюдать - follow'
+    puts 'Можно проверить ее уровень показателей - status'
     user_interaction
   end
 
