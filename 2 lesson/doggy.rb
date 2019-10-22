@@ -20,13 +20,13 @@ class Doggy
     @health += 10
     @mood += 10
     @asleep -= 10
-		p "#{@name} понравилось :)"
+    p "#{@name} понравилось :)"
     user_interaction
   end
 
   def walk
-	  puts "Вы гуляете с #{@name}"
-		@tiredness += 30
+    puts "Вы гуляете с #{@name}"
+    @tiredness += 30
     @mood += 20
     @asleep -= 15
     if @tiredness > 90
@@ -36,13 +36,13 @@ class Doggy
   end
 
   def go_to_sleep
-	  puts "#{@name} пошел спать"
+    puts "#{@name} пошел спать"
     @hunger += 50
     @health += 25
     @asleep = 100
     @tiredness = 0
     user_interaction
-	end
+  end
 
   def play
     puts "Весело играть с #{@name}!"
@@ -102,18 +102,18 @@ class Doggy
   end
 
   def follow
-		r = rand(1..3)
-		case r
-		when 1
-			p "#{@name} бегал по комнате, нашел мячик и схватил его :)"
-		  @mood += 10
+    r = rand(1..3)
+    case r
+    when 1
+      p "#{@name} бегал по комнате, нашел мячик и схватил его :)"
+      @mood += 10
       @tiredness += 10
-		when 2
-		  p "#{@name} гулял по улице, встретил другую собаку и они облаяли друг друга"
-			@mood -= 5
+    when 2
+      p "#{@name} гулял по улице, встретил другую собаку и они облаяли друг друга"
+      @mood -= 5
       @tiredness += 5
-		when 3
-			p "Хозяина не было целый день дома. Когда он пришел, #{@name} был очень рад и вилял хвостом"
+    when 3
+      p "Хозяина не было целый день дома. Когда он пришел, #{@name} был очень рад и вилял хвостом"
       @mood += 35
       @hunger += 35
     end
