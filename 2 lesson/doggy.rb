@@ -139,7 +139,7 @@ class Doggy
   def time_passes
     @hunger += 5
     @asleep -= 5
-    if @hunger > 80 && @health < 20
+    if @hunger > 90 || @health < 20
       p "#{@name} сбегает с дома, потому что вы плохо с ним обращались("
     end
   end
