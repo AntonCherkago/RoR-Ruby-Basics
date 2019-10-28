@@ -1,4 +1,4 @@
-require 'tamagochi_web'
+require 'require convert_to_html'
 
 class Doggy
 
