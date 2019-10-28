@@ -1,3 +1,5 @@
+require 'tamagochi_web'
+
 class Doggy
 
   def initialize(name)
@@ -10,6 +12,7 @@ class Doggy
     @tiredness = 30
     @asleep = 70
     @defend = false
+    @file = tamagochi_web.new
     puts "#{@name} начал жить с нами :)"
     user_interaction
   end
