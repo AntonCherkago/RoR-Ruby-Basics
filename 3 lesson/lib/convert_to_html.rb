@@ -11,15 +11,14 @@ class ConvertToHtml
   private
 
   def invalid_content(content, bypass_html)
-    content.match(/<script[\s\S]*?>[\s\S]*?<\/script>/) || content.match(/<html[\s\S]*?>[\s\S]*?<\/html>/) || !bypass_html
+    !bypass_html if content.match(/<script[\s\S]*?>[\s\S]*?<\/script>/) || content.match(/<html[\s\S]*?>[\s\S]*?<\/html>/)
   end
 
   def write_to_file(filename, content)
     file = File.open("#{filename}.html", 'w+')
     file.puts '<!DOCTYPE html>'
     file.puts "<html lang='en'>"
-    file.puts "<meta charset='utf-8'>"
-    file.puts '<header></header>'
+    file.puts "<head><meta charset='utf-8'> <title>Hello</title></head>"
     file.puts "<body>#{content}</body>"
     file.puts '</html>'
     file.close
