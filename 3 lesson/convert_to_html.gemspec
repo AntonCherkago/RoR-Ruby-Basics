@@ -10,7 +10,7 @@ require "convert_to_html/version"
 
   spec.summary       = 'ConvertToHtml - gem for accepting content and stores it in an .html page'
   spec.description   = 'simple gem for creating method that accepts content and stores the transmitted content in an .html page'
-  spec.homepage      = https://github.com/AntonCherkago/RoR-Ruby-Basics/tree/master/3%20lesson
+  spec.homepage      = 'https://github.com/AntonCherkago/RoR-Ruby-Basics/tree/master/3%20lesson'
 
   spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
