@@ -4,18 +4,18 @@ require "convert_to_html/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "convert_to_html"
-  spec.version       = ConvertToHtml::VERSION
+  spec.version       = '0.1.0'
   spec.authors       = ["AntonCherkago"]
   spec.email         = ["antonkonovalov167@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = 'ConvertToHtml - gem for accepting content and stores it in an .html page'
+  spec.description   = 'simple gem for creating method that accepts content and stores the transmitted content in an .html page'
+  spec.homepage      = https://github.com/AntonCherkago/RoR-Ruby-Basics/tree/master/3%20lesson
 
   spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = https://github.com/AntonCherkago/RoR-Ruby-Basics/tree/master/3%20lesson
+  #spec.metadata["source_code_uri"] =
   spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
 
   # Specify which files should be added to the gem when it is released.
