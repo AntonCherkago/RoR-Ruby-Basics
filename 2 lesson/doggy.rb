@@ -11,6 +11,7 @@ class Doggy
     @hunger = 30
     @tiredness = 30
     @asleep = 70
+    @dirty = 20
     @defend = false
     puts "#{@name} начал жить с нами :)"
     user_interaction
@@ -31,6 +32,7 @@ class Doggy
     @tiredness += 30
     @mood += 20
     @asleep -= 15
+    @dirty += 15
     if @tiredness > 90
       puts "#{@name} wants to sleep"
     end
@@ -52,6 +54,7 @@ class Doggy
     @tiredness += 20
     @health += 5
     @hunger += 20
+    @dirty += 10
     user_interaction
   end
 
@@ -60,6 +63,7 @@ class Doggy
     @health += 10
     @hunger += 5
     @mood +=5
+    @dirty = 0
     user_interaction
   end
 
@@ -100,6 +104,7 @@ class Doggy
     puts "tiredness = #{@tiredness}"
     puts "asleep = #{@asleep}"
     puts "defend = #{@defend}"
+    puts "dirty = #{@dirty}"
     user_interaction
   end
 
@@ -118,11 +123,13 @@ class Doggy
         p "Хозяина не было целый день дома. Когда он пришел, #{@name} был очень рад и вилял хвостом"
         @mood += 35
         @hunger += 35
+        @dirty += 15
     end
     user_interaction
   end
 
   private
+
 
   def user_interaction
     time_passes
@@ -141,8 +148,29 @@ class Doggy
   def time_passes
     @hunger += 5
     @asleep -= 5
+    if @asleep < 20
+      puts "#{@name} хочет спать"
+      @health -= 3
+    end
+
+    if @hunger > 65
+      puts "#{@name} голодный, пора кушать!"
+      @mood -= 5
+      @health -= 3
+    end
+
+    if @dirty > 50
+      puts "#{@name} грязный, пора купаться!"
+      @health -= 5
+    end
+
+    if @mood < 30
+      puts "#{@name} заскучал, поиграйте с ним"
+    end
+
     if @hunger > 90 || @health < 20
-      p "#{@name} сбегает с дома, потому что вы плохо с ним обращались("
+      puts "#{@name} сбегает с дома, потому что вы плохо с ним обращались("
+      exit
     end
   end
 end
