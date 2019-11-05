@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+<h1><%= @name %></h1>
+
+<p>Укажите тип взаимодействия с питомцем</p>
+
+<form action="/play_with_doggy" method="post">
+  <button name="feed">покормить</button>
+  <button name="walk">погулять</button>
+  <button name="go_to_sleep">идти спать</button>
+  <button name="play">поиграть</button>
+  <button name="bathe">купаться</button>
+  <button name="scratch">чесать за ухом</button>
+  <button name="follow">наблюдать за <%= @name %></button>
+  <button name="exit"> выйти </button>
+</form>
+
+<p><%= "Здоровье: #{@health}
+        Голод: #{@hunger}
+        Усталость: #{@tiredness}
+        Настроение: #{@mood}
+        Желание спать: #{@asleep}
+        Защитник: #{@defend}
+        Грязный: #{@dirty}" %></p>
+</body>
+</html>

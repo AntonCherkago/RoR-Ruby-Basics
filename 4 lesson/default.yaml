@@ -1,0 +1,8 @@
+health: 70
+mood: 70
+hunger: 30
+tiredness: 30
+asleep: 70
+dirty: 20
+defend: false
+id: doggy_name
