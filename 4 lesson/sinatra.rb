@@ -26,6 +26,7 @@ post '/play_with_doggy' do
   elsif params[:follow]
     @doggy.follow
   elsif params[:exit]
+    
     status = ["health" => "#{@health}",
               "hunger" => "#{@hunger}",
               "tiredness" => "#{@tiredness}",
